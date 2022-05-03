@@ -16,6 +16,11 @@ html,body {
     width: 100%;
 }
 
+li:hover {
+    cursor: pointer;
+    background-color: rgba(236, 236, 236, 0.5);
+}
+
 .container {
     display: grid;
     height: 100%;
@@ -27,18 +32,14 @@ html,body {
 
 .header-top {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-}
-
-.header-box1 {
-    padding-left: 16px;
+    padding: 0 1rem 0 3rem;
 }
 
 .header-box2 {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-items: end;
+    display: flex;
+    justify-content: end;
     align-items: center;
 }
 
@@ -57,7 +58,7 @@ html,body {
     justify-content: space-between;
     align-items: center;
     border-radius: 50px;
-    width: max(50%,12rem);
+    width: 90%;
 }
 
 .searchbox-container > span {
@@ -74,23 +75,18 @@ html,body {
 
 .header-bottom {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1rem 0 3rem;
 }
 
-.user-profile {
+.user-profile, .header-box3 {
     display: flex;
     align-items: center;
-}
-
-.header-box3 {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
 }
 
 .header-box4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: end;
     align-items: center;
 }
 
@@ -102,7 +98,7 @@ html,body {
 }
 
 .smol {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .bold {
@@ -113,8 +109,8 @@ html,body {
 
 .header-button {
     background-color: rgb(211, 134, 45);
-    width: 150px;
-    height: 1.8rem;
+    width: 6rem;
+    height: 1.9rem;
     border-radius: 50px;
     border: none;
     color: white;
@@ -140,17 +136,24 @@ html,body {
 
 .sidebar-items > ul > li {
     display: flex;
-    padding-left: 1rem;
+    padding-left: 2rem;
     font-size: 1.5rem;
     align-items: center;
+    height: 2.5rem;
+    margin: -5px;
+}
+
+
+.sidebar-items > ul > li > span {
+    padding-right: 1.5rem;
 }
 
 .sidebar-items > ul > li:first-child {
-    padding: 1.5rem 0 1.5rem 1rem;
+    padding: 1.5rem 0 1.5rem 1.5rem;
 }
 
-.sidebar-items > ul > li > span {
-    padding-right: 1.1rem;
+.sidebar-items > ul > li:first-child > span:first-child {
+    padding-right: 0.8rem;
 }
 
 .sidebar-title {
@@ -164,7 +167,7 @@ html,body {
     background-color: rgb(108, 117, 139);
     display: grid;
     grid-template-columns: 4fr 1fr;
-    padding: 2rem;
+    padding: 1.5rem 2rem 0 2rem;
 }
 
 .dashboard-title {
@@ -234,6 +237,7 @@ input:focus {
 .announcements, .trending {
     display: grid;
     grid-template-rows: 25px;
+    margin-left: 10px;
 }
 
 .announcement-card, .trending-card {
@@ -268,6 +272,7 @@ input:focus {
 .user-cards {
     display: flex;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 .user-account {
