@@ -13,57 +13,115 @@ html,body {
     font-family: 'Roboto', sans-serif;
     color: rgb(241, 243, 250);
     height: 100%;
+    width: 100%;
 }
 
 .container {
     display: grid;
     height: 100%;
+    width: 100%;
     grid-template-columns: minmax(8rem, 18rem) minmax(12rem, 3fr);
 }
 
-.dashboard {
-    display: grid;
-    grid-template-rows: 1fr 4fr;
-    grid-row: 1/3;
-}
-
-.dashboard-header {
-    background-color: rgb(50, 56, 73);
-}
+/*---------------------------------- HEADER STARTS HERE -----------------------------*/
 
 .header-top {
-    width: 100%;
-    height: 50%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
     align-items: center;
 }
 
 .header-box1 {
-    width: 60%;
     padding-left: 16px;
 }
 
 .header-box2 {
-    width: 40%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: end;
     align-items: center;
-    justify-content: flex-end;
-    margin-right: 30px;
 }
 
 .notifications, .user-profile-img, .user-name{
-    padding-right: 16px;
+    padding-right: 1.5rem;
+}
+
+.user-name {
+    font-weight: 700;
+}
+
+.searchbox-container {
+    height: 2.1rem;
+    background-color: rgb(193, 197, 201);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    width: max(50%,12rem);
+}
+
+.searchbox-container > span {
+    padding-left: 5px;
+}
+
+#searchbox {
+    border: none;
+    padding-left: 15px;
+    background: none;
+    width: 100%;
 }
 
 .header-bottom {
-    width: 100%;
-    height: 50%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 .user-profile {
     display: flex;
     align-items: center;
 }
+
+.header-box3 {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.header-box4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.greeting {
+    display: grid;
+    height: 6rem;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+.smol {
+    font-size: 0.7rem;
+}
+
+.bold {
+    align-self: start;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.header-button {
+    background-color: rgb(211, 134, 45);
+    width: 150px;
+    height: 1.8rem;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    margin-right:20px
+}
+
+/*------------------------------------- SIDEBAR STARTS HERE -----------------------------------*/
 
 .sidebar {
     background-color: rgb(39, 40, 51);
@@ -86,18 +144,6 @@ html,body {
     align-items: center;
 }
 
-.profile-picture {
-    width: 6rem;
-    height: auto;
-    border-radius: 50%;
-}
-
-.profile-picture-mini {
-    width: 4rem;
-    height: auto;
-    border-radius: 50%;
-}
-
 .sidebar-items > ul > li:first-child {
     padding: 0.5rem 0 1.5rem 0.5rem;
 }
@@ -111,30 +157,39 @@ html,body {
     font-weight: 700;
 }
 
+/*------------------------------------ DASHBOARD STARTS HERE --------------------------------------*/
+
 .dashboard-board {
     background-color: rgb(108, 117, 139);
 }
 
-.searchbox-container {
-    width: 35rem;
-    height: 2.2rem;
-    background-color: rgb(193, 197, 201);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 50px;
+.dashboard {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 4fr;
+    grid-row: 1/3;
 }
 
-.searchbox-container > span {
-    padding-left: 5px;
-}
-
-#searchbox {
-    border: none;
-    background: none;
-    width: 27.8rem;
+.dashboard-header {
+    width: 100%;
+    display: grid;
+    background-color: rgb(50, 56, 73);
 }
 
 input:focus {
     outline: none;
+}
+
+/*-------------------------------------- PROFILE PICTURE -------------------------------------------*/
+
+.profile-picture {
+    width: 4rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profile-picture-mini {
+    width: 3.5rem;
+    height: auto;
+    border-radius: 50%;
 }
